@@ -9,7 +9,11 @@ const upperBiasLevel = 2 / 3;
 
 function computerPlay(lower, upper) {
 
+    // Generate random number for computer choice
+
     let computerChoice = Math.random();
+
+    // Translate computer choice to game move and return
 
     switch(true) {
 
@@ -26,4 +30,4 @@ function computerPlay(lower, upper) {
             break;
     }
 
-} 
+}
