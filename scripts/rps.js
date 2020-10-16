@@ -13,21 +13,26 @@ function computerPlay(lower, upper) {
 
     let computerChoice = Math.random();
 
-    // Translate computer choice to game move and return
+    // Return corresponding game move based on computer choice
 
     switch(true) {
 
-        case (0 <= computerChoice) && (computerChoice < lower):
+        // First, check to see if higher than the upper boundary
+
+        case upper < computerChoice:
             return "rock";
             break;
         
-        case (lower <= computerChoice) && (computerChoice < upper):
+        // If not, check to see if higher than the lower boundary
+
+        case lower < computerChoice:
             return "paper";
             break;
 
-        case (upper <= computerChoice) && (computerChoice < 1):
-            return "scissors";
-            break;
-    }
+        // If not either of these, return the only remaining option
 
+        default:
+            return "scissors";
+    }
+    
 }
