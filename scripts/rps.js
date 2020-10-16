@@ -1,5 +1,10 @@
 // Rock, Paper, Scissors (v0.1)
 
+// Initialise player and computer scores
+
+let playerScore = 0;
+let computerScore = 0;
+
 // Function to produce computer move
 
 function computerPlay() {
@@ -61,25 +66,25 @@ function playRound(playerSelection, computerSelection) {
         case (playerSelection === "rock") && (computerSelection === "paper"):
             return "You lose! Paper beats rock...";
             break;
-            
+
         // Player chooses paper, computer chooses rock (player wins)
 
         case (playerSelection === "paper") && (computerSelection === "rock"):
             return "You win! Paper beats rock!";
             break;
-            
+
         // Player chooses paper, computer chooses scissors (player loses)
 
         case (playerSelection === "paper") && (computerSelection === "scissors"):
             return "You lose! Scissors beats paper...";
             break;
-            
+
         // Player chooses scissors, computer chooses rock (player loses)
 
         case (playerSelection === "scissors") && (computerSelection === "rock"):
             return "You lose! Rock beats scissors...";
             break;
-            
+
         // Player chooses scissors, computer chooses paper (player wins)
 
         case (playerSelection === "scissors") && (computerSelection === "paper"):
@@ -90,7 +95,7 @@ function playRound(playerSelection, computerSelection) {
 
         default:
             return `It's a tie! You both chose ${playerSelection}. Fancy another go?`;
-            
+
     }
 
 }
