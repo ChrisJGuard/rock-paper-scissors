@@ -103,5 +103,22 @@ function playRound(playerSelection, computerSelection) {
 // Function to play five rounds with score tracking
 
 function playGame() {
-    
+
+    // Create player input variable
+
+    let playerInput;
+
+    // Reset scores to zero
+
+    playerScore = 0;
+    computerScore = 0;
+
+    // Get first round choice from player
+
+    playerInput = prompt("Please enter your move:", "e.g. rock, paper, or scissors");
+
+    // Play round and log result to the console
+
+    console.log(playRound(playerInput, computerPlay()));
+
 }
