@@ -15,14 +15,14 @@ function computerPlay(lower, upper) {
 
     // Return corresponding game move based on computer choice
 
-    switch(true) {
+    switch (true) {
 
         // First, check to see if higher than the upper boundary
 
         case upper < computerChoice:
             return "rock";
             break;
-        
+
         // If not, check to see if higher than the lower boundary
 
         case lower < computerChoice:
@@ -46,6 +46,51 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
 
-    
+    // Check each individual case to see who wins!
+
+    switch (true) {
+
+        // Player chooses rock, computer chooses scissors (player wins)
+
+        case (playerSelection === "rock") && (computerSelection === "scissors"):
+            return "You win! Rock beats scissors!";
+            break;
+
+        // Player chooses rock, computer chooses paper (player loses)
+
+        case (playerSelection === "rock") && (computerSelection === "paper"):
+            return "You lose! Paper beats rock...";
+            break;
+            
+        // Player chooses paper, computer chooses rock (player wins)
+
+        case (playerSelection === "paper") && (computerSelection === "rock"):
+            return "You win! Paper beats rock!";
+            break;
+            
+        // Player chooses paper, computer chooses scissors (player loses)
+
+        case (playerSelection === "paper") && (computerSelection === "scissors"):
+            return "You lose! Scissors beats paper...";
+            break;
+            
+        // Player chooses scissors, computer chooses rock (player loses)
+
+        case (playerSelection === "scissors") && (computerSelection === "rock"):
+            return "You lose! Rock beats paper...";
+            break;
+            
+        // Player chooses scissors, computer chooses paper (player wins)
+
+        case (playerSelection === "scissors") && (computerSelection === "paper"):
+            return "You win! Scissors beats paper!";
+            break;
+
+        // Both players choose the same (tie result)
+
+        default:
+            return "It's a tie! Fancy another go?";
+            
+    }
 
 }
