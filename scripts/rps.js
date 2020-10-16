@@ -77,7 +77,7 @@ function playRound(playerSelection, computerSelection) {
         // Player chooses scissors, computer chooses rock (player loses)
 
         case (playerSelection === "scissors") && (computerSelection === "rock"):
-            return "You lose! Rock beats paper...";
+            return "You lose! Rock beats scissors...";
             break;
             
         // Player chooses scissors, computer chooses paper (player wins)
