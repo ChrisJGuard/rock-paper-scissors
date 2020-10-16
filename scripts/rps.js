@@ -19,13 +19,13 @@ function computerPlay() {
 
         // First, check to see if higher than the upper boundary
 
-        case upper < computerChoice:
+        case upperBiasLevel < computerChoice:
             return "rock";
             break;
 
         // If not, check to see if higher than the lower boundary
 
-        case lower < computerChoice:
+        case lowerBiasLevel < computerChoice:
             return "paper";
             break;
 
@@ -89,8 +89,9 @@ function playRound(playerSelection, computerSelection) {
         // Both players choose the same (tie result)
 
         default:
-            return "It's a tie! Fancy another go?";
+            return `It's a tie! You both chose ${playerSelection}. Fancy another go?`;
             
     }
 
 }
+
