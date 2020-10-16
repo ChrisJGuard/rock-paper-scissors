@@ -1,9 +1,9 @@
 // Rock, Paper, Scissors (v0.1)
 
-// Initialise player and computer scores
+// Create player and computer score variables
 
-let playerScore = 0;
-let computerScore = 0;
+let playerScore;
+let computerScore;
 
 // Function to produce computer move
 
@@ -100,3 +100,8 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+// Function to play five rounds with score tracking
+
+function playGame() {
+    
+}
