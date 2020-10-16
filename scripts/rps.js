@@ -34,5 +34,18 @@ function computerPlay(lower, upper) {
         default:
             return "scissors";
     }
+
+}
+
+// Function to play a single round against the computer
+
+function playRound(playerSelection, computerSelection) {
+
+    // Convert both player and computer selections to lower case
+
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
+
     
+
 }
