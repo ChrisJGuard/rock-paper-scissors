@@ -1,13 +1,13 @@
 // Rock, Paper, Scissors (v0.1)
 
-// Set computer bias levels (equal chance by default)
-
-const lowerBiasLevel = 1 / 3;
-const upperBiasLevel = 2 / 3;
-
 // Function to produce computer move
 
-function computerPlay(lower, upper) {
+function computerPlay() {
+
+    // Set computer bias levels (equal chance by default)
+
+    const lowerBiasLevel = 1 / 3;
+    const upperBiasLevel = 2 / 3;
 
     // Generate random number for computer choice
 
