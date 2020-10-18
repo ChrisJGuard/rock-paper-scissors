@@ -108,9 +108,9 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-// Function to play five rounds with score tracking
+// Function to play given number of rounds with score tracking
 
-function playGame() {
+function playGame(rounds) {
 
     // Initialise player input variable
 
@@ -121,17 +121,23 @@ function playGame() {
     playerScore = 0;
     computerScore = 0;
 
-    // Get first round choice from player
+    // Create loop based on requested number of rounds
 
-    playerInput = prompt("Please enter your move:", "e.g. rock, paper, or scissors");
+    for (i = 0; i < rounds; i++) {
 
-    // Play round and log result to the console
+        // Get choice from player
 
-    console.log(playRound(playerInput, computerPlay()));
+        playerInput = prompt("Please enter your move:", "e.g. rock, paper, or scissors");
 
-    // Log current score to the console
+        // Play round and log result to the console
 
-    console.log(`The current score is: Player ${playerScore} - Computer ${computerScore}`);
+        console.log(playRound(playerInput, computerPlay()));
+
+        // Log current score to the console
+
+        console.log(`The current score is: Player ${playerScore} - Computer ${computerScore}`);
+
+    }
 
     // Alert the player that the game is over
 
