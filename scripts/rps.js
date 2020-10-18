@@ -102,7 +102,7 @@ function playRound(playerSelection, computerSelection) {
         default:
             playerScore += 1;
             computerScore += 1;
-            return `It's a tie! You both chose ${playerSelection}. Fancy another go?`;
+            return `It's a tie! You both chose ${playerSelection}.`;
 
     }
 
@@ -123,6 +123,14 @@ function playGame() {
 
     // Play round and log result to the console
 
-    return playRound(playerInput, computerPlay());
+    console.log(playRound(playerInput, computerPlay()));
+    
+    // Log current score to the console
+
+    console.log(`The current score is: Player ${playerScore} - Computer ${computerScore}`);
+
+    // Alert the player that the game is over
+
+    return "The game is over - thanks for playing!";
 
 }
