@@ -58,49 +58,55 @@ function playRound(playerSelection, computerSelection) {
         // Player chooses rock, computer chooses scissors (player wins)
 
         case (playerSelection === "rock") && (computerSelection === "scissors"):
+            playerScore += 1;
             return "You win! Rock beats scissors!";
             break;
 
         // Player chooses rock, computer chooses paper (player loses)
 
         case (playerSelection === "rock") && (computerSelection === "paper"):
+            computerScore += 1;
             return "You lose! Paper beats rock...";
             break;
 
         // Player chooses paper, computer chooses rock (player wins)
 
         case (playerSelection === "paper") && (computerSelection === "rock"):
+            playerScore += 1;
             return "You win! Paper beats rock!";
             break;
 
         // Player chooses paper, computer chooses scissors (player loses)
 
         case (playerSelection === "paper") && (computerSelection === "scissors"):
+            computerScore += 1;
             return "You lose! Scissors beats paper...";
             break;
 
         // Player chooses scissors, computer chooses rock (player loses)
 
         case (playerSelection === "scissors") && (computerSelection === "rock"):
+            computerScore += 1;
             return "You lose! Rock beats scissors...";
             break;
 
         // Player chooses scissors, computer chooses paper (player wins)
 
         case (playerSelection === "scissors") && (computerSelection === "paper"):
+            playerScore += 1;
             return "You win! Scissors beats paper!";
             break;
 
         // Both players choose the same (tie result)
 
         default:
+            playerScore += 1;
+            computerScore += 1;
             return `It's a tie! You both chose ${playerSelection}. Fancy another go?`;
 
     }
 
 }
-
-// Function
 
 // Function to play five rounds with score tracking
 
@@ -122,5 +128,5 @@ function playGame() {
     // Play round and log result to the console
 
     return playRound(playerInput, computerPlay());
-    
+
 }
