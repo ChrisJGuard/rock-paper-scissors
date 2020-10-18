@@ -112,10 +112,6 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame() {
 
-    // Create player input variable
-
-    let playerInput;
-
     // Reset scores to zero
 
     playerScore = 0;
@@ -123,7 +119,7 @@ function playGame() {
 
     // Get first round choice from player
 
-    playerInput = prompt("Please enter your move:", "e.g. rock, paper, or scissors");
+    let playerInput = prompt("Please enter your move:", "e.g. rock, paper, or scissors");
 
     // Play round and log result to the console
 
