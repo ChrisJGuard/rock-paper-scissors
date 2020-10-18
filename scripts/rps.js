@@ -38,6 +38,7 @@ function computerPlay() {
 
         default:
             return "scissors";
+
     }
 
 }
