@@ -100,6 +100,8 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+// Function
+
 // Function to play five rounds with score tracking
 
 function playGame() {
@@ -119,6 +121,6 @@ function playGame() {
 
     // Play round and log result to the console
 
-    console.log(playRound(playerInput, computerPlay()));
-
+    return playRound(playerInput, computerPlay());
+    
 }
