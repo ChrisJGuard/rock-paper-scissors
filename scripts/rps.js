@@ -1,4 +1,4 @@
-// Rock, Paper, Scissors (v0.1)
+// Rock, Paper, Scissors (v1)
 
 // Create player and computer score variables
 
@@ -112,7 +112,7 @@ function playRound(playerSelection, computerSelection) {
 
 function playGame(rounds) {
 
-    // Initialise player input variable
+    // Create player input variable
 
     let playerInput;
 
@@ -133,9 +133,13 @@ function playGame(rounds) {
 
         console.log(playRound(playerInput, computerPlay()));
 
-        // Log current score to the console
+        // Log current or final score to the console
 
-        console.log(`The current score is: Player ${playerScore} - Computer ${computerScore}`);
+        if (i + 1 < rounds) {
+            console.log(`The current score is: Player ${playerScore} - Computer ${computerScore}.`);
+        } else {
+            console.log(`That's it! The final score is: Player ${playerScore} - Computer ${computerScore}.`)
+        }
 
     }
 
